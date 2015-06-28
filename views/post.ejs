@@ -6,7 +6,9 @@
         <h2>
             <a href="/user/<%= post.user %>"><%= post.user %></a> 说
         </h2>
-        <p><small><%= post.time %></small></p>
+        <p>
+            <small><%= post.time %></small>
+        </p>
         <p><%= post.post %></p>
     </div>
     <% if (index % 3 == 2 ) { %>
