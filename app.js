@@ -7,11 +7,11 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var methodOverride = require('method-override');
-var flash = require('connect-flash');
 var settings = require('./database/settings');
+var flash = require('connect-flash');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var user = require('./routes/user');
 var post = require('./routes/post');
 var reg = require('./routes/reg');
 var login = require('./routes/login');
@@ -56,7 +56,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // 引入使用相对�
 app.use(flash());
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/user', user);
 app.use('/post', post);
 app.use('/reg', reg);
 app.use('/login', login);
