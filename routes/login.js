@@ -12,7 +12,8 @@ router.post('/', Check.checkNotLogin);
 router.route('/')
     .get(function(req, res) {
         res.render('login', {
-            title: '登录',
+            title: '登入',
+            page: '登入',
             user: req.session.user,
             success: req.flash('success').toString(),
             error: req.flash('error').toString()

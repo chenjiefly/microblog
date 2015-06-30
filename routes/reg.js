@@ -14,6 +14,7 @@ router.route('/')
     .get(function(req, res) {
         res.render('reg', {
             title: '首页',
+            page: '注册',
             user: req.session.user,
             success: req.flash('success').toString(),
             error: req.flash('error').toString()
